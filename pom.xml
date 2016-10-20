@@ -24,9 +24,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <junit.version>4.12</junit.version>
-        <webdriver.version>2.53.1</webdriver.version>
+        <webdriver.version>3.0.1</webdriver.version>
         <htmlunitdriver.version>2.23</htmlunitdriver.version>
-        <drivermanager.version>3.0.1-SNAPSHOT</drivermanager.version>
+
+        <!-- development release uses the osshr staging repository -->
+        <!-- <drivermanager.version>3.0.1-SNAPSHOT</drivermanager.version> -->
+
+        <!-- version published to maven central http://repo1.maven.org/maven2/uk/co/compendiumdev/selenium-driver-manager/ -->
+        <drivermanager.version>3.0.1</drivermanager.version>
 
     </properties>
 
@@ -102,6 +107,8 @@
 
     <!-- mvn test -Dselenium2basics.webdriver=FIREFOX
                 will run the tests using FirefoxDriver -->
+    <!-- mvn test -Dselenium2basics.webdriver=HTMLUNIT
+            will run the tests using FirefoxDriver -->
     <!-- mvn test -Dselenium2basics.webdriver=CHROME
                 will run the tests using CHROME -->
     <!-- mvn test -Dselenium2basics.webdriver=IE
